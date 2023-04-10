@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:black;
+}
+/* Logo */
+
+.logoContainer{
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-left: 40px;
+}
+
+.logo{
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  width: 35px;
+}
+.logo:hover{
+  color: var( --exchange-green);
+
+}
+/* Menu */
+.menuContainer {
+  position: left;
+  /* width: 50%; */
+  display: flex;
+  align-items: center;
+  color:white;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-left: 290px;
+  color: white;
+}
+
+.menuItem {
+  margin-right: 4px;
+  padding: 0 8px;  
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+  a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  a:-webkit-any-link:hover{
+      color: var( --exchange-green);
+    
+  
+
+}
+/* SearchBar */
+.searchContainer {
+  opacity: 100%;
+  justify-content: space-between;
+  height: 30px;
+  width: 25%;
+  margin: 0 auto;
+  display: flex; 
+  position: relative;
+}
+
+input[type="text"]{
+  margin-right: 100px;
+  width: 60px;
+  transition: width 2s ease-in-out;
+  box-shadow: 0 0 0 .01rem white;
+  border-radius: 50px;
+}
+
+input[type="text"]:focus {
+  width: 100%;
+  background-color: rgb(168, 168, 168);
+}
+
+.searchContainer > input{
+  background-color: rgb(168, 168, 168);
+  border-color: white;
+  border: 2px solid white;
+  color: black;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 33px;   
+  -webkit-font-smoothing: antialiased;
+}
+
+.searchContainer > input:focus {
+  outline: none;
+} 
+
+.SearchIcon{
+  position: absolute;
+  left: 10px;
+  bottom: 2px;
+  font-size: 1.5rem;
+  display: grid;
+  color: white;
+}
+
+/* User */
+.userContainer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  margin-right: 50px;
+  cursor: pointer;
+}
+.userContainer:hover{
+  color: var( --exchange-green);
+
+}
+.user{
+  width: 30.5px;
+  height: 30.5px;
+  border-radius: 60%;
+  margin-right: 8px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.user:hover {
+  background-color: var( --exchange-green);
+}
+
+@media only screen and (max-width: 800px) {
+  .menuContainer {
+    display: none;
+  }
+  
+  .menuIcon {
+    display: block;
+    cursor: pointer;
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .menuIcon > svg {
+    font-size: 2.5rem;
+    color: black;
+    background-color: black;  }
+}  
+
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--header-gradient-top);
+  opacity: 100%;
+  color: white;
+}
+.container{
+  width: 1px;
+  margin: 0 auto;
+  display: flex; 
+  justify-content: space-between;
+  width:100%;
+  align-items: center;
+}
+.logoContainer{
+  display: flex;
+  align-items:center;
+  color: white ;
+  width: 100px;
+  margin-left: 40px;
+}
+.logo{
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  width: 35px;
+}
+ .menuContainer {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  color:white;
+}
+.menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-left: 290px;
+  color: white;
+}
+.menuItem {
+    margin-right: 4px;
+    padding: 0 8px;  
+    cursor: pointer;
+    color: white;
+    font-size:medium;
+    text-decoration: none;
+} 
+
+.searchContainer {
+  opacity: 100%;
+  justify-content: space-between;
+  height: 30px;
+  width: 25%;
+  margin: 0 auto;
+  display: flex; 
+  position: relative;
+}
+input[type="text"]{
+  margin-right: 100px;
+  width: 60px;
+  transition: width 2s ease-in-out;
+  box-shadow: 0 0 0 .01rem white;
+  border-radius: 50px;
+}
+input[type="text"]:focus {
+  width: 100%;
+  background-color: rgb(168, 168, 168);
+}
+.searchContainer > input{
+  background-color: rgb(168, 168, 168);
+  border-color: white;
+  border: 2px solid white;
+  color:black;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 33px;   
+  -webkit-font-smoothing: antialiased;
+}
+.searchContainer > input:focus {
+  outline: none;
+} 
+.SearchIcon{
+  position: absolute;
+  left: 10px;
+  bottom: 2px;
+  font-size: 1.5rem;
+  display:grid;
+  color: white;
+} 
+
+.userContainer{
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  color: white;
+  margin-right: 50px;
+  cursor: pointer;
+}
+.user{
+  width: 32.5px;
+  height: 32.5px;
+  border-radius: 60%;
+  margin-right: 8px;
+  color: black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.user:hover {
+  background-color: var(--header-gradient-top);
+}
+
+a:-webkit-any-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+} 
+
+
+
+
+
+
+
+/*
+  transition: width 1s ease-in-out;
+input[type="text"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 12px;
+  border-color: transparent transparent transparent white;
+}*/
+/*.search span {
+  margin-right: 00px;
+  font-size: 13px;
+  color: rgb(203, 203, 203);
+  font-family: sans-serif;
+  cursor: pointer;
+}*/
+/*.searchContainer > input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 12px;
+  border-color: transparent transparent transparent white;
+}*/
+
+
+
+/*.header__title{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  float:center;
+  margin-right: 20px;
+  align-items:center;
+  height: 30px;
+  font-size:xx-small;
+  color: aliceblue;
+    
+}*/
+/*.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    color: white;
+    /*background-color: rgb(7, 31, 7); /
+}*/
+
+
+/*.header__menuItems {
+  margin-left: 48px;
+  margin-right: 29px;
+}
+.header__menuItems a{
+  color: black;
+  /*commented out /font-weight: italic;
+  *//*
+  text-decoration: none;
+  padding: 0 5px;
+  font-family:'Times New Roman', Times, serif;
+  font-size:medium;
+}
+.header__menuItems a:hover,
+.header__menuItems a:active {
+  color: rgb(84, 84, 84);
+}
+/*a:first-of-type {
+  color: rgb(50, 79, 154);
+}// commented out
+*/
+
+
+

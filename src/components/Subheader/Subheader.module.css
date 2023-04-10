@@ -1,0 +1,15 @@
+.subheader{
+    background-color: var(--header-gradient-top);
+    height: 300px;
+    position: relative;
+    border-bottom: 10px;
+    border-color: black;
+}
+.container{
+    max-width: var(--site-width);
+    margin: 0 auto; 
+    padding: 40px 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}

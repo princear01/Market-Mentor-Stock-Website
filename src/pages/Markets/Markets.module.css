@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Markets{
+  color: white;
+}
+
+/* .quiz-container { 
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  
+  .question {
+    margin: 20px 0;
+  }
+  
+  .question h3 {
+    margin-bottom: 10px;
+  }
+  
+  .options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .options li {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .options li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .options li.selected {
+    background-color: #5bc0de;
+    color: white;
+    border-color: #5bc0de;
+  }
+  
+  .submit-button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #4cae4c;
+  }
+  
+  .results-container {
+    margin-top: 0;
+  }  */

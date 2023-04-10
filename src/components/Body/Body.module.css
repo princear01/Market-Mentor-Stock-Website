@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body{
+    background-color: black;
+    height: 2000px;
+    padding: 0px;
+    position: relative
+}
+.container{
+    max-width: var(--site-width);
+    margin: 0 auto; 
+    padding: 40px 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+  }
+
+.cards {
+  display: flex;
+  grid-template-columns: repeat(3, 0);
+  grid-gap: 150px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 300px;
+  
+}
+
+.cards__item {
+  height: 250px;
+  width: 200px;
+
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  border-radius: 30%;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  border-radius: 30%;
+
+}
+
+.card:nth-child(1) {
+  background-image: linear-gradient(to right, var(--header-gradient-top), var(--exchange-green));
+  box-shadow: 0 0 20px var(--header-gradient-top), 0 0 40px var(--exchange-green), 0 0 40px var(--exchange-green);
+}
+
+.card:nth-child(2) {
+  background-image: linear-gradient(to right, var(--gradient-bottom), var(--header-gradient-top));
+  box-shadow: 0 0 20px var(--header-gradient-top), 0 0 40px var(--gradient-bottom), 0 0 80px var(--gradient-bottom);
+}
+
+.card:nth-child(3) {
+  background-image: linear-gradient(to right, black, rgb(84, 84, 84));
+  box-shadow: 0 0 20px black, 0 0 40px rgb(84, 84, 84), 0 0 80px rgb(84, 84, 84);
+}
+
+.card__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.card__picture {
+  margin-bottom: 12px;
+  filter: invert(1);
+  
+}
+
+.card__picture img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+
+.card__overlay::before {
+  content: "Read";
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  
+}
+
+.card__overlay:hover, .card__overlay:focus {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  border-radius: 0;
+  opacity: 1;
+  border-radius: 30%;
+
+}
+
+.card__overlay:hover::before, .card__overlay:focus::before {
+  content: none;
+}
+
+.card:nth-child(1) .card__overlay {
+  background-image: linear-gradient(to right, var(--header-gradient-top), var(--exchange-green));
+  box-shadow: 0 0 20px var(--header-gradient-top), 0 0 40px var(--header-gradient-top), 0 0 80px var(--header-gradient-top); 
+}
+
+.card:nth-child(2) .card__overlay {
+  background-image: linear-gradient(to right, var(--gradient-bottom), var(--header-gradient-top));
+  box-shadow: 0 0 20px var(--gradient-bottom), 0 0 40px var(--gradient-bottom), 0 0 80px var(--gradient-bottom); 
+}
+
+.card:nth-child(3) .card__overlay {
+  background-image: linear-gradient(to right, black, rgb(84, 84, 84));
+  box-shadow: 0 0 20px black, 0 0 40px black, 0 0 80px black;
+}
+
+.card__content {
+  z-index: 1;
+  padding: 20px;
+  line-height: 1.4;
+  opacity: 0;
+  visibility: hidden;
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+
+}
+
+.card__overlay:hover ~ .card__content {
+opacity: 1;
+visibility: visible;
+transition-delay: 0.2s;
+
+}
+.card__content h2 {
+margin: 0;
+margin-bottom: 16px;
+
+}
+
+/* background-image: linear-gradient(to right, var(--header-gradient-top), var(--exchange-green));
+
+background-image: linear-gradient(to right, var(--gradient-bottom), var(--header-gradient-top));
+
+background-image: linear-gradient(to right, black, rgb(84, 84, 84)); */
