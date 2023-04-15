@@ -1,9 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import Header from "/Users/alirana/senior-project/src/components/Header/Header.jsx"
-import Subheader from "/Users/alirana/senior-project/src/components/Subheader/Subheader.js"
-import Body from "/Users/alirana/senior-project/src/components/Body/Body.jsx";
-import Footer from "./components/Footer/Footer";
+import Header from "../Header/Header"
+import Subheader from "../Subheader/Subheader.js"
+import Body from "../Body/Body.jsx";
+import Footer from "../Footer/Footer";
 import styles from "./Layout.module.css";
 
 const Layout = ({ children }) => {

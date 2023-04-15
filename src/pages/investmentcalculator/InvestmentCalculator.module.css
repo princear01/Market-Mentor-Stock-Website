@@ -1,10 +1,10 @@
 .InvestmentCalculator{
 background-color: black;
-height: 2500px;
+height: 2000px;
 padding: 1px;
 }
 .title {
-font-family: 'Exo 2', sans-serif;
+font-family: 'Questrial';
 font-size: 2rem;
 font-weight: 100;
 color: white;
@@ -17,99 +17,143 @@ color: #5becbc;
 }
 
 .calcCont {
-    font-family: 'Exo 2', sans-serif;
-    width: 70%;
-    margin: 50px auto;
-    border-radius: 5px;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #f2f2f29a;
+font-family: 'Questrial';
+width: 80%;
+margin: 50px auto;
+border-radius: 5px;
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+background-color: #CBE4DE;
 }
-  
-  .calculator, .otherCalc {
-    width: 50%;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-  .otherCalc {
-margin-left: 0px;  }
-  
-  .calculator h2, .otherCalc h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    background-color: white;
-    text-align: center;
-    width: 50%;
-    border-radius: 10px;
 
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1rem;
-  }
-  
-  td {
-    padding: 0.5rem;
-    
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  .input {
-    width: 60%;
-    padding: 0.3rem;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 10px;
+.calculator, .otherCalc {
+width: 50%;
+margin-bottom: 2rem;
+text-align: left;
+}
+.otherCalc {
+margin-left: 0px;  
+}
 
-  }
-  .input:hover{
-    background-color: #ccccccd2;
+.calculator h2, .otherCalc h2 {
+margin-left: auto;
+margin-right: auto;
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 1rem;
+background-color: rgba(155, 155, 155, 0.439);
+text-align: center;
+width: 80%;
+border-radius: 10px;
+margin-top: 1rem;
+margin-bottom: 2rem;
+}
 
-  }
-  .button {
-    display: flex;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #0062cc;
- }
-  .resultCont{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 100;
-    margin-top: 90px;
-    /* background-color: rgba(0, 0, 0, 0.818); */
-    color: rgb(0, 0, 0);
-    display: flex;
-    width: 80%;
-    border-radius: 50px;
-  }
-  .result {
-    margin: 20px 0;
-    margin-left: 10px;
-    text-align: left;
-    line-height: 3rem;
-    color: rgb(0, 0, 0);
-    
-    } 
-  
-  
+table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 1rem;
+}
+
+td {
+padding: 0.5rem;
+
+
+}
+
+label {
+font-weight: bold;
+font-size: 1.2rem;
+
+}
+
+.input {
+width: 60%;
+padding: 0.1rem;
+font-size: 1rem;
+margin-bottom: 0.2rem;
+border-radius: 10px;
+
+}
+.input:hover{
+background-color: #ccccccd2;
+
+}
+.button {
+display: flex;
+margin-left: auto;
+margin-right: auto;
+background-color: #2E4F4F;
+color: #fff;
+border: none;
+padding: 1rem 3rem;
+font-size: 1rem;
+border-radius: 5px;
+cursor: pointer;
+font-family: 'Questrial';
+}
+
+.button:hover {
+background-color: #2C3333;
+}
+
+.resultCont{
+font-family: 'Questrial';
+font-size: 1.3rem;
+font-weight: 100;
+margin-top: 90px;
+/* background-color: rgba(0, 0, 0, 0.818); */
+color: rgb(0, 0, 0);
+display: flex;
+width: 80%;
+border-radius: 50px;
+}
+.result {
+margin: 20px 0;
+margin-left: 10px;
+text-align: left;
+line-height: 3rem;
+color: rgb(0, 0, 0);
+font-family: 'Questrial';
+} 
+.iIcont{
+width: 90%;
+margin: 50px auto;
+border-radius: 5px;
+
+}
+.investmentInfo {
+font-family: 'Questrial';
+padding: 20px;
+background-color: #CBE4DE;
+border-radius: 5px;    
+margin: 50px auto;
+}
+
+.investmentInfo h2 {
+font-size: 2rem;
+font-weight: bold;
+margin-bottom: 2rem;
+margin-top: 1rem;
+margin-left: 5%;
+text-align: left;
+display: list-item;
+font-family: 'Questrial';
+
+}
+
+.investmentInfo p {
+font-family: 'Questrial';
+font-size: 1.2rem;
+line-height: 1.5;
+width: 90%;
+text-align: left;
+margin: 0 auto;
+}
+
+
+
 /* .calculator {
 display: flex;
 flex-direction: column;
@@ -144,43 +188,3 @@ padding: 10px 20px;
 cursor: pointer;
 }
 */
-
-
-
-
-
-
-.iIcont{
-    background-color: #f2f2f2;
-    width: 90%;
-    margin: 50px auto;
-    border-radius: 5px;
-
-}
-.investmentInfo {
-    font-family: 'Exo 2', sans-serif;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 5px;    
-    margin: 50px auto;
-}
-  
-.investmentInfo h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    margin-left: 5%;
-    text-align: left;
-    display: list-item;
-}
-
-.investmentInfo p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    width: 90%;
-    text-align: left;
-    margin: 0 auto;
-}
-  
-  

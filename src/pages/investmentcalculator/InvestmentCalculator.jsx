@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Layout from "/Users/alirana/senior-project/src/Layout.jsx";
+import Layout from "../../components/Layout/Layout.jsx";
 import styles from "./InvestmentCalculator.module.css";
 
 const InvestmentCalculator = (props) => {

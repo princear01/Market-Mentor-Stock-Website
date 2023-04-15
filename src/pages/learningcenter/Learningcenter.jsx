@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../../Layout";
+import Layout from "../../components/Layout/Layout";
 import styles from "./Learningcenter.module.css";
-import Logo from "/Users/alirana/senior-project/src/webimage.jpg"
+import Logo from "../../assets/pics/webimage.jpg"
 import data from "../../data";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
@@ -10,10 +10,9 @@ const LearningCenter = () => {
   return (
     <Layout>
       <div className={styles.LearningCenter}>
-        <div className={styles.LCcontainer}/>
 
       <div className={styles.headingcont}>
-         <div className={styles.idkcontainer}>
+         {/* <div className={styles.idkcontainer}> */}
           <div className={styles.maintextContainer}>
             <h1 className={styles.header}>Learning Center</h1>
             <p className={styles.maintext}>
@@ -23,15 +22,15 @@ const LearningCenter = () => {
             Join us today and embark on a journey of discovery and growth.
             </p>
         </div>
-        <div className={styles.cardContainer}>
-        <img src={Logo} alt="Stock Logo" className={styles.card} />
+        {/* <div className={styles.cardContainer}> */}
+        <img src={Logo} alt="" className={styles.card} />
           
-          </div>
-          </div>
+          {/* </div> */}
+          {/* </div> */}
           </div>
     
     <div className={styles.secondcont}>
-      <div className={styles.vocabcont}>
+      {/* <div className={styles.vocabcont}> */}
         <h1 className={styles.vocab}>Vocabulary</h1>
          <p className={styles.vocabtext}>Expand your stock market knowledge with our curated vocabulary lists, organized by difficulty level. From basic terms to advanced concepts, our Vocabulary section has everything you need to improve your financial literacy.</p>
     <div className={styles.vocabContainer}>   
@@ -56,12 +55,11 @@ const LearningCenter = () => {
         </div>
         <p className={styles.hardexplanation}>Covers complex financial topics and advanced investment strategies.</p>    
       </a>
-    </div>
+    {/* </div> */}
   </div>
 </div>
 
   <div className={styles.thrdcont}>
-    <div className={styles.quizcont}>
       <h1 className={styles.quizzes}>Quizzes</h1>
         <p className={styles.quiztext}>Expand your stock market knowledge with our curated vocabulary lists, organized by difficulty level. From basic terms to advanced concepts, our Vocabulary section has everything you need to improve your financial literacy.</p>
   
@@ -71,7 +69,6 @@ const LearningCenter = () => {
         <h2>Knowledge</h2>
         </div>
         </a>
-      </div>
       </div>
     </div>
   

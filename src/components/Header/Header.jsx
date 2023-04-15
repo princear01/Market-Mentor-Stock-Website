@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from "/Users/alirana/senior-project/src/robinhood.svg";
+import Logo from "../../assets/pics/robinhood.svg";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // import Home from '/Users/alirana/senior-project/src/pages/About/About.jsx';
 // import About from '/Users/alirana/senior-project/src/pages/Home/Home/home.jsx';
@@ -27,12 +27,13 @@ const Header = () => {
     const handleMenuClick = () => {
       setMenuOpen(!menuOpen);
     };
-  return (
-    <div className={styles.header}>
+
+return (
+  <div className={`${styles.header} ${styles.sticky}`}>
       <div className={styles.container}>
       <div className={styles.logoContainer}>
         <img src={Logo} alt="Stock Logo" className={styles.logo} />
-        <span>Stock </span>
+        <span>SLEARN </span>
       </div>
   {isMobile ? (
             <div className={styles.menuHBContainer}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Layout from "/Users/alirana/senior-project/src/Layout.jsx";
+import Layout from "../../../components/Layout/Layout.jsx";
 import styles from "./esyvocab.module.css";
-import data from "/Users/alirana/senior-project/src/data.js";
+import data from "../../../data.js";
 
 const Esyvocab = () => {
   const [currentTermIndex, setCurrentTermIndex] = useState(0);
@@ -78,8 +78,8 @@ const Esyvocab = () => {
   </tr>
 ))}
 
-        </tbody>
-      </table>
+      </tbody>
+    </table>
     </div>
   </div>  
 </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import Logo from "/Users/alirana/senior-project/src/robinhood.svg";
+import Logo from "../../assets/pics/robinhood.svg";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';

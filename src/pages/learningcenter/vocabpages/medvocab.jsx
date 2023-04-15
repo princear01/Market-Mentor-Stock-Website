@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Layout from "/Users/alirana/senior-project/src/Layout.jsx";
+import Layout from "../../../components/Layout/Layout";
 import styles from "./med.module.css";
-import data from "/Users/alirana/senior-project/src/data.js";
+import data from "../../../data";
 
 const Medvocab = () => {
     const [currentTermIndex, setCurrentTermIndex] = useState(0);
@@ -60,7 +60,7 @@ return (
           </div>
         </div>
       </div>
-
+      
       <div className={styles.vocabContainer}> 
   <div className={styles.termsContainer}> 
   <h2>VOCAB LIST</h2>

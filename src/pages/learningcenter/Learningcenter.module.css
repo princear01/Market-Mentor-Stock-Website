@@ -1,92 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Questrial';
+
+  }
 a:-webkit-any-link:hover {
   color: var(--exchange-green);
 }
 .LearningCenter {
   background-color: black;
   color: white;
-  height: 2600px;
-  padding: 10px;
-  position: relative;
+  height: 2200px;
+  padding: 1px;
 }
-.LCcontainer{
-  max-width: var(--site-width);
-  margin: 0 auto; 
-  justify-content: space-between;
-}
+
 /* ------------------------------------------------------ */
 .headingcont{
-  max-width: 2000px;
+  margin: 0 auto;
+  max-width: 1800px;
   margin-top: 20px;
+  justify-content: space-between;
+  display: flex;
+  height: 600px;
+
+
 }
-.idkcontainer{
+/* .idkcontainer{
   height: 500px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  max-width: 2000px;
 
+
+} */
+/* .cardContainer {
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 4rem;
+  margin-right: 0px;
+} */
+
+.card {
+  width: 470px;
+  height: 380px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 100px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  perspective: 1000px;
+  /* box-shadow: 0 0 10px #5becbc, 0 0 20px black, 0 0 10px var(--gradient-bottom); */
+}
+.img {
+  margin-bottom: 150px;
+  max-width: 100%;
+  height: auto;
 }
 .maintextContainer {
-  font-family: 'Exo 2', sans-serif;
-  color: #5becbc;
-  font-size: 1.5rem;
-  font-weight: 100;
+   color: #5becbc;
+  font-size: 1.4rem;
+  font-weight: lighter;
   text-align: left;
   margin: 6rem;
-  width: 40%;
-  margin-left: 150px;
-  
+  width: 50%;
 }
 .header {
-  font-family: 'Exo 2', sans-serif;
-  color: #5becbc;
-  font-size: 2rem;
+   color: white;
+   /* #5becbc */
+  font-size: 2.5rem;
+  justify-content: space-between;
   font-weight: 500;
   margin-bottom: 2rem;
   text-shadow: 0 0 10px black, 0 0 20px black, 0 0 10px #5becbc, 0 0 20px #5becbc, 0 0 20px black, 0 0 40px #5becbc, 0 0 50px #5becbc;
 }
 
 .maintext {
-  line-height: 2rem;
+  line-height: 2.2rem;
   text-align: left;
 }
 
-.cardContainer {
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  width: 40%;
-  margin-top: 4rem;
-  margin-right: 20px;
-}
-
-.card {
-  margin-right: 40px;
-  width: 470px;
-  height: 380px;
-  border-radius: 100px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  perspective: 1000px;
-  display: flex;
-  /* box-shadow: 0 0 10px #5becbc, 0 0 20px black, 0 0 10px var(--gradient-bottom); */
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ------------------------------------------------------ */
+/* ----------------------------------Vocab 1/2----------------------------------------------------------------------- */
 .secondcont{
-  /* background-color:rgba(255, 255, 255, 0.747) ; */
+  max-width: 1800px;
+  margin: 0px auto;
   height: 700px;
-}
-.vocabcont{
+  border-radius: 5px;
   margin-top: 200px;
-  padding-top: 0px;
-  
+  background-image: linear-gradient(to bottom, black 40%, #5becbc);
 }
+
 .vocab{
-  font-family: 'Exo 2', sans-serif;
   color: #5becbc;
   font-size: 3rem;
   font-weight: 500;
@@ -94,10 +97,8 @@ img {
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-top: 0px;
 }
 .vocabtext {
-  font-family: 'Exo 2', sans-serif;
   color: white;
   font-size: 1.5rem;
   font-weight: 400;
@@ -111,58 +112,48 @@ img {
   display: flex;
   line-height: 2.2rem;
 }
-/* ------------------------------------------------------ */
+/* ---------------------------Vocab 2/2--------------------------- */
 .vocabContainer {
   height: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
 }
 .basicexplanation {
-  font-family: 'Exo 2', sans-serif;
   color: white;
   font-size: 1.3rem;
   font-weight: 500;
-  text-align: left;
-  margin-top: 10px;
-  margin-left: 180px;
+  margin: 0 auto;
   width: 250px;
   text-align: center;
   transform: translateY(70%); 
 }
 .intermediateexplanation {
-  font-family: 'Exo 2', sans-serif;
   color: white;
   font-size: 1.3rem;
   font-weight: 500;
-  text-align: left;
-  margin-top: 0px;
-  margin-left: 100px;
+  margin: 0 auto;  
   width: 250px;
   text-align: center;
   transform: translateY(70%); 
 }
 .hardexplanation {
-  font-family: 'Exo 2', sans-serif;
   color: white;
   font-size: 1.3rem;
   font-weight: 500;
-  text-align: left;
-  margin-top: 0px;
-  margin-left: 30px;
+  margin: 0 auto;  
   width: 250px;
   text-align: center;
   transform: translateY(70%); 
 }
 .menu_a {
-  font-family: 'Exo 2', sans-serif;
   color: white;
   font-size: 1.3rem;
-  margin-left: 150px;
   width: 300px;
   height: 280px;
-  border-radius: 100px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   perspective: 1000px;
   display: flex;
   justify-content: center;
@@ -172,14 +163,11 @@ img {
   transition: transform .6s ease;
 }
 .menu_b {
-  font-family: 'Exo 2', sans-serif;
   color: white;
   font-size: 1.3rem;
-  margin-left: 70px;
+  margin: 0 auto;  
   width: 300px;
   height: 280px;
-  border-radius: 100px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   perspective: 1000px;
   display: flex;
   justify-content: center;
@@ -189,14 +177,10 @@ img {
   transition: transform .6s ease;
 }
 .menu_c {
-  font-family: 'Exo 2', sans-serif;
   color: white;
   font-size: 1.3rem;
-  margin-right: 200px;
   width: 300px;
   height: 280px;
-  border-radius: 100px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   perspective: 1000px;
   display: flex;
   justify-content: center;
@@ -214,28 +198,27 @@ img {
 .menu_c:hover {
   transform: translateY(-30px);
 }
-/* ------------------------------------------------------ */
+/* ------------------Quiz------------------------------------ */
 .thrdcont{
   height: 700px;
+  background-image: linear-gradient(to bottom, black 40%, rgb(31, 162, 249));
+  margin: 0px auto;
+  border-radius: 5px;
+  max-width: 1800px;
 }
-.quizcont{
-  margin-top: 150px;
-  padding-top: 0px; 
-}
+
 .quizzes{
-  font-family: 'Exo 2', sans-serif;
-  color: #5becbc;
+  color: rgb(31, 162, 249);
   font-size: 3rem;
   font-weight: 500;
-  text-shadow: 0 0 10px black, 0 0 20px black, 0 0 10px #5becbc, 0 0 20px #5becbc, 0 0 20px black, 0 0 40px #5becbc, 0 0 50px #5becbc;
+  text-shadow: 0 0 10px black, 0 0 20px black, 0 0 10px rgb(31, 162, 249), 0 0 20px rgb(31, 162, 249), 0 0 20px black, 0 0 40px rgb(31, 162, 249), 0 0 50px rgb(31, 162, 249);
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-top: 0px;
+  margin-top: 100px;
 }
 .quiztext {
-  font-family: 'Exo 2', sans-serif;
-  color: white;
+   color: white;
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
@@ -254,24 +237,32 @@ img {
   align-items: center;
   margin-top: 100px;
 }
-/* ------------------------------------------------------ */
 .quiz {
-  font-family: 'Exo 2', sans-serif;
   color: white;
   font-size: 1rem;
   width: 400px;
   height: 150px;
   border-radius: 100px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   perspective: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, black 40%, #5becbc);
-  box-shadow: 0 0 1px #5becbc, 0 0 1px #5becbc, 0 0 30px var(--gradient-bottom);
-  transition: transform .6s ease;
+  background-image: linear-gradient(to right, black 40%, rgb(31, 162, 249));
+  box-shadow: 0 0 1px rgb(31, 162, 249), 0 0 1px rgb(31, 162, 249), 0 0 30px var(--gradient-bottom);
+  transition: 0.5s ease-in-out;
 
 }
+/*    color: white;
+  font-size: 1.3rem;
+  width: 300px;
+  height: 280px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, black 40%, #5becbc);
+  box-shadow: 0 0 1px #5becbc, 0 0 1px #5becbc, 0 0 30px var(--gradient-bottom);
+  transition: transform .6s ease;------------------------------------------------------ */
 
 
 
