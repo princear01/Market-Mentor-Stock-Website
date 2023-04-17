@@ -10,7 +10,7 @@ import Medvocab from "../src/pages/learningcenter/vocabpages/medvocab.jsx";
 import Hardvocab from "../src/pages/learningcenter/vocabpages/hardvocab.jsx";
 import Knowledge from "../src/pages/learningcenter/quizpages/knowledge.jsx";
 
-import data from './data.js'
+
 
 
 function App() {

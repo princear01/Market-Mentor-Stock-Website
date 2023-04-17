@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../../components/Layout/Layout";
 import styles from "./med.module.css";
-import data from "../../../data";
+import data from "../../../data/data.js";
 
 const Medvocab = () => {
     const [currentTermIndex, setCurrentTermIndex] = useState(0);

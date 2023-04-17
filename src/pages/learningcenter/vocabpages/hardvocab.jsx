@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../../components/Layout/Layout.jsx";
 import styles from "./hardvocab.module.css";
-import data from "../../../data.js";
+import data from "../../../data/data.js";
 
 
 const Hardvocab = () => {

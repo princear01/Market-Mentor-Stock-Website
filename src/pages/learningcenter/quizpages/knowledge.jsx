@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../../components/Layout/Layout.jsx";
 import styles from "./knowledge.module.css";
-import quiz from "../../../quiz.js";
+import quiz from "../../../data/quiz.js";
 import classNames from 'classnames';
 
 

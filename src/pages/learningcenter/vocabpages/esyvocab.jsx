@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../../components/Layout/Layout.jsx";
 import styles from "./esyvocab.module.css";
-import data from "../../../data.js";
+import data from "../../../data/data.js";
 
 const Esyvocab = () => {
   const [currentTermIndex, setCurrentTermIndex] = useState(0);

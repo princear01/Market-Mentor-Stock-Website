@@ -71,18 +71,3 @@ return (
 };
 
 export default Header;
-
-	/* menu header */
-/* <div className={styles.menuContainer}>
-		<ul className={styles.menu}>
-		<li className={styles.menuItem}>
-			<Link to="/">Home</Link>
-            	</li>
-			<li className={styles.menuItem}>
-              <Link to="/bout">About</Link>
-            	</li>
-            <li className={styles.menuItem}>
-              <Link to="/learningcenter">Learning Center</Link>
-            	</li>
-          </ul>
-        </div> */

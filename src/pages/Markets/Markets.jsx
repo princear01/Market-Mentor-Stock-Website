@@ -11,7 +11,7 @@
 
 //   useEffect(() => {
 //     async function fetchData() {
-//       const response = await alphaVantageAPI.getIntradayData(stockName, '15min');
+//       const response = await alphaVantageAPI.getIntradayData('IBM', '15min');
 //       const data = await response.json();
 //       setMarketData(data);
 //     }
