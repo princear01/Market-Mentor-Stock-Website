@@ -1,170 +1,308 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.imageContainer {
+    height: 750px;
+}
+.image {
+    width: 100%;
+    min-height: 750px;
+    max-height: 750px;
+    z-index: -1;
 }
 .header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 1; /* To ensure the header appears above other elements */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
 .sticky {
-position: sticky;
-top: 0;
-z-index: 999;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.container{
-font-family: 'Questrial';
-width: 100%;
-padding: 20px;
-font-size: 1.2rem;
-display: flex;
-align-items: center;
-justify-content: space-between;
-background-color:black;
+.container {
+    font-family: 'Questrial';
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
 }
 
 /* ------------Logo -----------------*/
 
-.logoContainer{
-display: flex;
-align-items: center;
-color: white;
-margin-left: 0px;
-width: 140px;
+.logoContainer {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+    width: 200px;   
+     font-weight: bold;
+    font-size: 1.17em;
+
 }
 
-.logo{
-margin-left: 20px;
-display: flex;
-align-items: center;
-width: 35px;
+.logo {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    margin-right: 10px;
 }
-.logo :hover{
-color: var( --exchange-green);
+.companyName{
+
 }
+/* .logo:hover {
+    color: var( --exchange-green);
+} */
 
 /*----------------- Menu -----------------*/
 .menuContainer {
-display: flex;
-align-items: center;
-color:white;
-margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border-right: 1px solid red;
+    height: 50px;
+    width: 750px;
+    justify-content: flex-end; /* added */
 }
 
 .menu {
-list-style-type: none;
-display: flex;
+    list-style-type: none;
+    display: flex;
+
 }
 
-.menuItem {
-padding: 0 10px;  
-text-align: center;
-cursor: pointer;
-color: white;
-font-size: 1.2rem;
-text-decoration: none;
+.menuItem {    
+    padding: 0 15px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.menuItem a:hover {
+    color: var(--exchange-green);
+  }
+/*----------------- Menu Icons -----------------*/
+
+.ArrowDropDownIcon {
+    position: absolute;
+    top: 65%;
+    right: 0;
+    transform: translateY(-50%);
+    color: white;
+}
+.ArrowDropDownIcon:hover {
+    color: var( --exchange-green);
+
+}
+.QuizIcon {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.QuizIcon:hover {
+    color: var( --exchange-green);
+
+}
+.abcIcon1 {
+    position: absolute;
+    left: 10px;
+    bottom: 132px;
+}
+.abcIcon1:hover {
+    color: var( --exchange-green);
+
+}
+.abcIcon2 {
+    position: absolute;
+    left: 10px;
+    bottom: 92px;
+}
+.abcIcon2:hover {
+    color: var( --exchange-green);
+
+}
+.abcIcon3 {
+    position: absolute;
+    left: 10px;
+    bottom: 50px;
+}
+.abcIcon3:hover {
+    color: var( --exchange-green);
+
+}
+/*----------------- Dropdown -----------------*/
+
+/* styles for the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* styles for the dropdown button */
+.dropdown > a {
+    display: block;
+    text-decoration: none;
+    padding: 16px;
+    position: relative;
+}
+
+/* styles for the dropdown content */
+.dropdown-content {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: white;
+    min-width: 200px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+/* styles for the links within the dropdown */
+.dropdown-content a {
+    padding: 12px 50px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1rem;
+    background-color: black;
+
+}
+
+/* styles for the links within the dropdown when hovered over */
+.dropdown-content a:hover {
+    color: var( --exchange-green);
+
+}
+
+/* show the dropdown content when the user hovers over the dropdown container */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
 }
 a:-webkit-any-link {
-color: white;
-cursor: pointer;
-text-decoration: none;
-}
-a:-webkit-any-link:hover{
-color: var( --exchange-green);
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* -----------------SearchBar -----------------*/
 .searchContainer {
-height: 30px;
-display: flex; 
-position: relative;
-width: 300px;
+    height: 30px;
+    display: flex;
+    position: relative;
+    width: 210px;
 }
 
-input[type="text"]{
-margin-right: 10px;
-width: 60px;
-transition: width 2s ease-in-out;
-box-shadow: 0 0 0 .01rem white;
-border-radius: 50px;
-}
+input[type="text"] {
+    margin-right: 10px;
+    width: 300px;
+    transition: width 2s ease-in-out;
+    box-shadow: 0 0 0 0.01rem white;
+    border-radius: 5px;
+    background: transparent;
 
+    
+}
 input[type="text"]:focus {
-width: 100%;
-background-color: rgb(168, 168, 168);
+    width: 100%;
+    background: transparent;
+
 }
 
-.searchContainer > input{
-background-color: rgb(168, 168, 168);
-border-color: white;
-border: 2px solid white;
-color: black;
-font-family: sans-serif;
-font-size: 14px;
-font-weight: 500;
-letter-spacing: 1px;
-padding-left: 33px;   
--webkit-font-smoothing: antialiased;
+.searchContainer > input {
+    border-color: white;
+    border: 2px solid white;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-left: 33px;
+    -webkit-font-smoothing: antialiased;
 }
-
 .searchContainer > input:focus {
-outline: none;
-} 
+    outline: none;
+}
 
-.SearchIcon{
-position: absolute;
-left: 10px;
-bottom: 2px;
-font-size: 1.5rem;
-display: grid;
-color: white;
+.SearchIcon {
+    position: absolute;
+    left: 10px;
+    bottom: 2px;
+    font-size: 1.5rem;
+    display: grid;
+    color: white;
+    cursor: pointer;
 }
 
 /* -----------------User----------------- */
-.userContainer{
-display: flex;
-align-items: center;
-justify-content: flex-end;
-color: white;
-margin-right: 50px;
-cursor: pointer;
-}
-.user{
-width: 30.5px;
-height: 30.5px;
-border-radius: 60%;
-margin-right: 8px;
-color: black;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: white;
-}
-.user:hover {
-background-color: var( --exchange-green);
+.button {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    transition: 0.5s;
+    margin: 0 auto;
+    /* centers the element horizontally */
+    display: flex;
+    justify-content: center;
+    /* centers the child elements vertically */
+    align-items: center;
+    /* centers the child elements horizontally */
 }
 
+.button:hover {
+    background-color: white;  
+      color: #162938;
+
+}
+
+/* .user {
+    width: 30px;
+    height: 30.5px;
+    border-radius: 60%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+} */
+
+/* .user:hover {
+    background-color: var( --exchange-green);
+} */
 @media only screen and (max-width: 800px) {
-.menuContainer {
-display: none;
+    .menuContainer {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+        color: white;
+    }
+
+    .menuIcon > svg {
+        color: black;
+        background-color: black;
+    }
 }
-
-.menuIcon {
-display: block;
-cursor: pointer;
-margin-right: 20px;
-color: white;
-}
-
-.menuIcon > svg {
-font-size: 2.5rem;
-color: black;
-background-color: black;  }
-}  
-
-
-

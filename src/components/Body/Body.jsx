@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Body.module.css";
+import Image from "../../assets/pics/bg.jpg";
+
 
 const Body = (props) => {
   const [cardList, setCardList] = useState([]);
@@ -30,14 +32,15 @@ const Body = (props) => {
 
   
   return (
-
+    <div className={styles.imageContainer}>
+    <img className={styles.image} src={Image} alt="Login Image"/>
       <div className={styles.body}>
         <div className={styles.container}>
           <ul className={styles.cards}>{cardList}</ul>
         </div>
         {props.children}
        
-     
+        </div>
     </div>
   );
 };

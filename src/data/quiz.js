@@ -16,6 +16,17 @@ const quiz = {
       correctAnswer: 'A share of ownership in a company',
     },
     {
+      question: 'What is a Share?',
+      choices: [
+        'A unit of ownership in a company',
+        'A type of bond',
+        'A share of ownership in a company',
+        'A type of commodity',
+      ],
+      type: 'MCQs',
+      correctAnswer: 'A share of ownership in a company',
+    },
+    {
       question: 'What is a dividend?',
       choices: [
         'A payment made to bondholders',

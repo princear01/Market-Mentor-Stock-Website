@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url( 'https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&display=swap');
 
-.main{
+.main {
     font-family: 'Questrial';
-    background-color: black;  
+    background-color: black;
     color: #11052c;
-    display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0 30px;
-    height: 900px;
-    
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 700px;
+    display: flex;
+
 }
 .header {
     font-family: 'Questrial';
@@ -17,156 +17,170 @@
     font-size: 2rem;
     font-weight: 500;
     padding-top: 20px;
-    align-items: center;
     position: absolute;
+
     margin: 0 auto;
     text-shadow: 0 0 10px black, 0 0 20px black, 0 0 10px #800080, 0 0 20px #800080, 0 0 20px black, 0 0 40px #800080, 0 0 50px #800080;
-  }
+}
 .quizcontainer {
-  max-width: 900px;
-  min-width: 550px;
-  background: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
-  border-radius: 4px;
-  margin-top: 100px;
-  padding: 30px 60px;
-  max-height: 500px;
-  border-radius: 15px;
+    max-width: 900px;
+    min-width: 550px;
+    background: linear-gradient(to left, #800080 , #ffc0cb );
+    margin-top: 100px;
+    padding: 30px 60px;
+    max-height: 500px;
+    border-radius: 15px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
 }
 
 .quizcontainer .activequestionno {
-  font-size: 32px;
-  font-weight: 500;
-  color: #800080;
+    font-size: 32px;
+    font-weight: 500;
+    color: #800080;
 }
 
 .quizcontainer .totalquestion {
-  font-size: 16px;
-  font-weight: 500;
-  color: #e0dee3;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e0dee3;
 }
 
 .quizcontainer h2 {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
 }
 
 .quizcontainer ul {
-  margin-top: 20px;
-  margin-left: -40px;
+    margin-top: 20px;
+    margin-left: -40px;
 }
 
 .quizcontainer ul li {
-  text-decoration: none;
-  list-style: none;
-  color: #2d264b;
-  font-size: 16px;
-  background: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 16px;
-  padding: 11px;
-  margin-top: 15px;
-  cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+    border: 1.5px solid #eaeaea;
+    border-radius: 16px;
+    padding: 11px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 .selectedanswer {
-  background-color: blue;
-  color: white;
-  border: 1px solid #800080;
+    background-color: white;
+    color: black;
+    border: 1px solid #800080;
 }
 
 .inquizButton {
-  background: black;
-  border-radius: 9px;
-  font-size: 18px;
-  color: #ffffff;
-  padding: 10px 42px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  margin-top: 15px;
+    background: black;
+    border-radius: 9px;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 10px 42px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
 }
-
 .inquizButton button:disabled {
-  background: #e7e8e9;
-  color: #9fa3a9;
-  cursor: not-allowed;
-} 
+    background: #e7e8e9;
+    color: #9fa3a9;
+    cursor: not-allowed;
+}
 
 .flexright {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
-/* Quiz result styles */
+
+/* ---------Quiz result styles ----------------*/
 .result {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 4px;
-  margin-top: 10px;
-  padding: 30px 60px;
-  max-height: 500px;
-  border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 30px 60px;
+    max-height: 500px;
+    border-radius: 15px;
 }
 
 .result h3 {
-  font-family: 'Questrial';
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+    font-family: 'Questrial';
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.result p{
-  font-family: 'Questrial';
-  text-align: left; 
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  padding-top: 15px;
-  margin-left: 50px;
+.result p {
+    font-family: 'Questrial';
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding-top: 15px;
+    margin-left: 50px;
 
 }
-.result p:hover{
-  border-radius: 10px;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  width: 65%;
+.result p:hover {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 70%;
 }
 .restartbutton {
-  background-color: black;
-  border-radius: 5px;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 20px;
-  cursor: pointer;
-  border: white;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: white;
 }
-
-
 .restartbutton:hover {
-  background-color: #3e8e41;
+    background-color: gray;
+}
+/* --------------------------------------------- */
+/* .bottom {
+    height: auto;
+    padding: 10px;
+    background-color: #BDCDD6;
+    display: flex;
+
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: 2px solid black;
 }
 
-/* .result-summary p {
-  font-size: 3rem;
+th {
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    text-align: left;
+    background-color: black;
+    border-bottom: 2px solid white;
+
 }
 
-.result-details {
-  width: 50%;
-  margin-top: 20px;
-  text-align: left;
+td {
+    padding: 10px 15px;
+    font-size: 1.3rem;
+
 }
-
-.result-details p {
-  font-size: 3rem;
-  margin-bottom: 5px;
-} */
-
-/* .correct {
-  color: green;
-}
-
-.incorrect {
-  color: red;
+.definitionCell {
+    font-size: 1.2rem;
+    padding: 20px 50px;
+    color: black;
+    width: 80%;
+    text-align: left;
+    list-style: circle;
 } */

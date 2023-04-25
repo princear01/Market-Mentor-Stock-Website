@@ -1,0 +1,158 @@
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+}
+
+.leftside_container {
+    width: 100%;
+    margin: 10px;
+
+}
+.main_title {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.current_price {
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.main_graph {
+    margin: 10px;
+    border: 2px solid white;
+    height: 570px;
+}
+/* -----------------------------------------------*/
+
+.rightside_container {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    margin: 75px 0 0;
+    padding-left: 20px;
+
+}
+.Dailystats {
+    color: var(--exchange-green);
+}
+.daily_date span.bold {
+    margin-right: 10px;
+
+}
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    font-size: 1rem;
+    margin-top: 0;
+    height: 100px;
+}
+
+.grid_container div {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid_container span.bold {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.grid_item {
+    padding: 0 2px;
+}
+.bold {
+    font-weight: bold;
+}
+/* -------------------------------- */
+.Keystats {
+    margin-top: 20px;
+    color: var(--exchange-green);
+
+}
+.grid2_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    font-size: 1rem;
+    margin-top: 0;
+    height: 100px;
+}
+.grid2_container div {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid2_container span.bold {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* --------------------------------------------------------- */
+.second_container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+}
+
+.about_container {
+    margin: 20px;
+    width: 67.5%;
+    padding-left: 20px;
+
+}
+
+.about_title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+
+.about_description {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 25px;
+
+}
+.showButton {
+    color: var(--exchange-green);
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Infocontainer {
+    margin-top: 30px;
+
+}
+
+.line {
+    display: flex;
+    margin-right: 0;
+}
+
+.label {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    width: calc(100%);
+}
+
+.value {
+    margin-top: 5px;
+    display: flex;
+    width: calc(100%);
+    font-size: 13px;
+
+}

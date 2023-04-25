@@ -2,9 +2,8 @@ import React from "react";
 import Layout from "../../components/Layout/Layout";
 import styles from "./Learningcenter.module.css";
 import Logo from "../../assets/pics/webimage.jpg"
-import data from "../../data/data";
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import DifficultyButton from "./DifficultyButton";
+import QuizButton from "./QuizButton";
 
 const LearningCenter = () => {
 
@@ -48,15 +47,15 @@ const LearningCenter = () => {
                             difficulty={"Intermediate"}
                             explanation={"Covers more advanced stock market concepts and terminology."}
                             link={"/learningcenter/medvocab"}
-                            divstyle={styles.menu_b}
-                            pstyle={styles.intermediateexplanation}/>
+                            divstyle={styles.menu_a}
+                            pstyle={styles.basicexplanation}/>
 
                         <DifficultyButton
                             difficulty={"Hard"}
                             explanation={"Covers complex financial topics and advanced investment strategies."}
                             link={"/learningcenter/hardvocab"}
-                            divstyle={styles.menu_c}
-                            pstyle={styles.hardexplanation}/>
+                            divstyle={styles.menu_a}
+                            pstyle={styles.basicexplanation}/>
                     </div>
                 </div>
 
@@ -68,11 +67,20 @@ const LearningCenter = () => {
                         your financial literacy.</p>
 
                     <div className={styles.quizContainer}>
-                        <a href="/learningcenter/knowledgequizzes">
-                            <div className={styles.quiz}>
-                                <h2>Knowledge</h2>
-                            </div>
-                        </a>
+                        <QuizButton
+                            type={"Knowledge"}
+                            explanation={"A review quiz for the basic vocabs you have learned"}
+                            link={"/learningcenter/knowledgequizzes"}
+                            divstyle={styles.quiz}
+                            pstyle={styles.basicexplanation}/> {/* remember to change the pstyle to the correct css */}
+
+                        {/* -------------------------------*/}
+
+                        <QuizButton type={"Stocks"} explanation={"write explanation"} link={"/learningcenter/knowledgequizzes"} //  create its page 
+                            divstyle={styles.quiz} pstyle={styles.basicexplanation}/> {/* remember to change the pstyle to the correct css */}
+
+                        <QuizButton type={"Trading"} explanation={"write explanation"} link={"/learningcenter/knowledgequizzes"} //  create its page
+                            divstyle={styles.quiz} pstyle={styles.basicexplanation}/> {/* remember to change the pstyle to the correct css */}
                     </div>
                 </div>
             </div>

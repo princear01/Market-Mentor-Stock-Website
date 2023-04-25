@@ -1,12 +1,25 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.Markets{
-  color: black;
+.Markets {
+    color: black;
 }
-
+.Hi {
+    height: 800px;
+    background-color: grey;
+    display: flex;
+}
+.Hi a {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 300px;
+}
 /* .quiz-container { 
     width: 80%;
     margin: 0 auto;

@@ -4,6 +4,8 @@ const data = {
         term: "Stock",
         definition:
         "A share in the ownership of a company, which represents a claim on the company's assets and earnings.",
+        example: 
+        "Apple is a stock",
     },
     {
         term: "Share",
