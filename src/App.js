@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from "../src/pages/Home/Home/home.jsx";
 import LearningCenter from "../src/pages/learningcenter/Learningcenter.jsx";
-import Markets from "../src/pages/Markets/Markets.jsx";
 import Stock from "../src/pages/Markets/Stock.jsx";
 
 import InvestmentCalculator from "../src/pages/investmentcalculator/InvestmentCalculator.jsx";
@@ -12,6 +11,7 @@ import Medvocab from "../src/pages/learningcenter/vocabpages/medvocab.jsx";
 import Hardvocab from "../src/pages/learningcenter/vocabpages/hardvocab.jsx";
 import Knowledge from "../src/pages/learningcenter/quizpages/knowledge.jsx";
 import Signin from '../src/pages/Signin/Signin.jsx';
+import Signup from '../src/pages/Signin/Signup.jsx';
 
 function App() {
     return (
@@ -20,11 +20,11 @@ function App() {
                 <Routes>
                     <Route path="/" element={< Home />}/>
                     <Route path="/learningcenter" element={< LearningCenter />}/>
-                    <Route path="/markets/:ticker?" element={< Markets />}/>
                     <Route path="/stock/:ticker?" element={< Stock />}/>
                     <Route path="/investmentcalculator" element={< InvestmentCalculator />}/>
                     <Route path="/about" element={< About />}/>
-                    <Route path="/Sign-in" element={< Signin />}/>
+                    <Route path="/signin" element={< Signin />}/>
+                    <Route path="/signup" element={< Signup />}/>
                     <Route path="/learningcenter/esyvocab" element={< Esyvocab />}/>
                     <Route path="/learningcenter/medvocab" element={< Medvocab />}/>
                     <Route path="/learningcenter/hardvocab" element={< Hardvocab />}/>

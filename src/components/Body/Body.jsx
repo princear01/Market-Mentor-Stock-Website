@@ -4,14 +4,19 @@ import Image from "../../assets/pics/bg.jpg";
 
 
 const Body = (props) => {
-  const [cardList, setCardList] = useState([]);
+  const [stockCard, setstockCard] = useState([]);
+  const [exchangesCard, setexchangesCard] = useState([]);
+  const [marketsCard, setmarketsCard] = useState([]);
 
   useEffect(() => {
     const stockCard = createCard('Stocks',  'Lorem ');
     const exchangesCard = createCard('Exhcanges',  'Dignissimos ');
     const marketsCard = createCard('Markets',  'Asperiores,');
   
-    setCardList([stockCard, exchangesCard, marketsCard]);
+    setstockCard([stockCard]);
+    setexchangesCard([exchangesCard]);
+    setmarketsCard([marketsCard]);
+
   }, []);
 
   function createCard(title, description) {
@@ -33,15 +38,21 @@ const Body = (props) => {
   
   return (
     <div className={styles.imageContainer}>
-    <img className={styles.image} src={Image} alt="Login Image"/>
+     {/* <img className={styles.image} src={Image} alt="Login Image"/> */}
       <div className={styles.body}>
-        <div className={styles.container}>
-          <ul className={styles.cards}>{cardList}</ul>
+        <div className={styles.container1}>
+          <ul className={styles.card1}>{stockCard}</ul>
+        </div>
+        <div className={styles.container2}>
+          <ul className={styles.card2}>{exchangesCard}</ul>
+        </div>
+        <div className={styles.container3}>
+          <ul className={styles.card3}>{marketsCard}</ul>
         </div>
         {props.children}
        
         </div>
-    </div>
+     </div>
   );
 };
 

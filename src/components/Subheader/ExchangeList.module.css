@@ -1,38 +1,32 @@
 .container {
     padding: 8px;
     color: white;
-  }
-  
-  .header {
-    font-size: 0.85rem;
-  }
-  
-  .exchangeList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .listItem {
+}
+
+.header {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+.listItem {
     display: flex;
-    margin: 10px 0;
+    margin: 10px;
     position: relative;
-  }
-  
-  .name {
+    font-size: 1.2rem;
+
+}
+
+.name {
     width: 150px;
-  }
-  
-  .index {
+    font-size: 1.2rem;
+
+}
+
+.index {
     width: 100px;
     color: var(--exchange-green);
-  }
-  
-  .percentage {
-    color: var(--exchange-green);
-  }
-  
-  .dot {
+}
+
+.dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -40,4 +34,16 @@
     position: absolute;
     left: -22px;
     top: 4px;
-  }
+}
+.list span.bold {
+  margin-right: 10px;
+  font-weight: bold;
+  
+}
+.data{
+  color: var(--exchange-green);
+  font-style: none;
+
+}
+.bold{
+}

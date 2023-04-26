@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import styles from './Stock.module.css';
 import Layout from '../../components/Layout/Layout';
 import {useParams} from 'react-router-dom';
+import Graph from './Graph';
 
 function Stock() {
 
@@ -28,6 +29,7 @@ function Stock() {
         set52WeekHigh] = useState('');
     const [week52Low,
         set52WeekLow] = useState('');
+    const [ PERatio, setPERatio] = useState('')
 
     useEffect(() => {
         fetchStock();
@@ -37,8 +39,6 @@ function Stock() {
 
     const fetchStock = async() => {
         const API_KEY = 'GKXRO2ZXHWTTL66A';
-        // `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker}&apikey=
-        // ${API_KEY}`
         let API_Call = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker}&apikey=${API_KEY}`;
 
         const response = await fetch(API_Call);
@@ -54,6 +54,7 @@ function Stock() {
         setMarketCapitalization(data.MarketCapitalization)
         set52WeekHigh(data['52WeekHigh']);
         set52WeekLow(data['52WeekLow'])
+        setPERatio(data.PERatio)
 
     };
     const fetchDailyData = async() => {
@@ -79,20 +80,27 @@ function Stock() {
 
         setDailyData(dailyDataArray);
     };
-
+    function formatMarketCap(marketCap) {
+        if (marketCap >= 1000000000000) {
+          return (marketCap / 1000000000000).toFixed(2) + "T";
+        } else if (marketCap >= 1000000000) {
+          return (marketCap / 1000000000).toFixed(2) + "B";
+        } else {
+          return (marketCap / 1000000).toFixed(2) + "M";
+        }
+      }
     return (
         <Layout>
             <div className={styles.main_container}>
                 <span className={styles.leftside_container}>
                     <div className={styles.main_title}>
-                        {name}
-                        {symbol}
+                        {name} {symbol}
                     </div>
                     <div className={styles.current_price}>
                         $165.13
                     </div>
                     <div className={styles.main_graph}>
-                        MAIN Stock GRAPH
+                    <Graph ticker={ticker} symbol={symbol}/>
                     </div>
                 </span>
                 <span className={styles.rightside_container}>
@@ -139,17 +147,22 @@ function Stock() {
                         <div className={styles.grid_item}>
                             <span className={styles.bold}>Market Cap:
                             </span>
-                            {marketCapitalization}
+                            {formatMarketCap(marketCapitalization)}
                         </div>
                         <div className={styles.grid_item}>
-                            <span className={styles.bold}>52 Week High:
+                            <span className={styles.bold}>52 Week High: 
                             </span>
                             {week52High}
                         </div>
                         <div className={styles.grid_item}>
-                            <span className={styles.bold}>52 Week Low:
+                            <span className={styles.bold}>52 Week Low: 
                             </span>
                             {week52Low}
+                        </div>
+                        <div className={styles.grid_item}>
+                            <span className={styles.bold}>PE Ratio: 
+                            </span>
+                            {PERatio}
                         </div>
                     </div>
                 </span>
@@ -183,9 +196,9 @@ function Stock() {
                         </div>
 
                         <div class={styles.line}>
-                            <span class={styles.value}>{AssetType}</span>
                             <span class={styles.value}>{Exchange}</span>
                             <span class={styles.value}>{Sector}</span>
+                            <span class={styles.value}>{AssetType}</span>
                         </div>
 
                     </div>

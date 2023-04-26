@@ -25,18 +25,17 @@
 
 .main_graph {
     margin: 10px;
-    border: 2px solid white;
-    height: 570px;
+    height: auto;
+    border-bottom: 0.1px solid white;
 }
 /* -----------------------------------------------*/
-
 .rightside_container {
-    height: 500px;
+    /* height: 500px; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     width: 40%;
-    margin: 75px 0 0;
+    margin: 90px 0 0;
     padding-left: 20px;
 
 }
@@ -47,6 +46,11 @@
     margin-right: 10px;
 
 }
+.daily_date {
+    height: 40px;
+    margin-top: 20px;
+    display: block;
+}
 .grid_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -54,6 +58,7 @@
     font-size: 1rem;
     margin-top: 0;
     height: 100px;
+    
 }
 
 .grid_container div {
@@ -64,17 +69,21 @@
 .grid_container span.bold {
     font-weight: bold;
     margin-right: 10px;
+    
 }
+
 .grid_item {
     padding: 0 2px;
+    
 }
 .bold {
     font-weight: bold;
 }
 /* -------------------------------- */
 .Keystats {
-    margin-top: 20px;
+    margin-top: 30px;
     color: var(--exchange-green);
+    padding-bottom: 20px;
 
 }
 .grid2_container {
@@ -82,8 +91,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     font-size: 1rem;
-    margin-top: 0;
-    height: 100px;
+    margin-top: 10px;
+    height: 60px;
 }
 .grid2_container div {
     display: flex;

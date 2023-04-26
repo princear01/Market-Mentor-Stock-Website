@@ -38,30 +38,15 @@
 }
 
 /* ------------Logo -----------------*/
-
 .logoContainer {
     display: flex;
     align-items: center;
     color: white;
-    margin-left: 20px;
-    width: 200px;   
-     font-weight: bold;
-    font-size: 1.17em;
-
+    margin-left: 10px;
+    width: 120px;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
-
-.logo {
-    display: flex;
-    align-items: center;
-    width: 30px;
-    margin-right: 10px;
-}
-.companyName{
-
-}
-/* .logo:hover {
-    color: var( --exchange-green);
-} */
 
 /*----------------- Menu -----------------*/
 .menuContainer {
@@ -71,7 +56,8 @@
     border-right: 1px solid red;
     height: 50px;
     width: 750px;
-    justify-content: flex-end; /* added */
+    justify-content: flex-end;
+    /* added */
 }
 
 .menu {
@@ -80,7 +66,7 @@
 
 }
 
-.menuItem {    
+.menuItem {
     padding: 0 15px;
     font-size: 1.2rem;
     text-decoration: none;
@@ -89,7 +75,7 @@
 }
 .menuItem a:hover {
     color: var(--exchange-green);
-  }
+}
 /*----------------- Menu Icons -----------------*/
 
 .ArrowDropDownIcon {
@@ -207,23 +193,20 @@ a:-webkit-any-link {
     height: 30px;
     display: flex;
     position: relative;
-    width: 210px;
+    width: 220px;
+    right: 0;
+    margin-left: 100px;
 }
 
 input[type="text"] {
     margin-right: 10px;
-    width: 300px;
-    transition: width 2s ease-in-out;
     box-shadow: 0 0 0 0.01rem white;
     border-radius: 5px;
     background: transparent;
-
-    
 }
 input[type="text"]:focus {
     width: 100%;
     background: transparent;
-
 }
 
 .searchContainer > input {
@@ -268,10 +251,9 @@ input[type="text"]:focus {
     align-items: center;
     /* centers the child elements horizontally */
 }
-
 .button:hover {
-    background-color: white;  
-      color: #162938;
+    background-color: white;
+    color: #162938;
 
 }
 

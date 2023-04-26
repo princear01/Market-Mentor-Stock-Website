@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
-import {Link} from 'react-router-dom';
-import styles from "./Signin.module.css";
-
+import {Link, Navigate, useNavigate} from 'react-router-dom';
+import styles from "./Signup.module.css";
+import {getAuth, createUserWithEmailAndPassword, firstName, lastName} from 'firebase/auth';
+import app from '../../firebase.config'
 import Logo1 from "../../assets/pics/robinhood.svg";
 import Logo2 from "../../assets/pics/robinhood.svg";
 import Image from "../../assets/pics/bg.jpg";
@@ -12,22 +13,47 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import QuizIcon from '@mui/icons-material/Quiz';
 import AbcIcon from '@mui/icons-material/Abc';
 import SearchBar from "../../components/Header/SearchBar";
+import PersonIcon from '@mui/icons-material/Person';
 
-function Signin() {
+function Signup() {
+
+    const auth = getAuth(app);
+
     // State variables
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [showRegister, setShowRegister] = useState(false);
-    const [width, setWidth] = useState(window.innerWidth);
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [isLearningCenterOpen, setIsLearningCenterOpen] = useState(false);
+    const [firstName,
+        setFirstName] = useState('');
+    const [lastName,
+        setLastName] = useState('');
+    const [email, setEmail] = useState("")
+    const [ password, setPassword] = useState("")
+    const [showRegister,
+        setShowRegister] = useState(false);
+    const [width,
+        setWidth] = useState(window.innerWidth);
+    const [menuOpen,
+        setMenuOpen] = useState(false);
+    const [isDropdownOpen,
+        setIsDropdownOpen] = useState(false);
+    const [isLearningCenterOpen,
+        setIsLearningCenterOpen] = useState(false);
+    const navigate = useNavigate();
 
     // Event handlers
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // handle form submission here
-    };
+    const signUp = () => {
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredentail) => {
+                //signed in 
+                const user = userCredentail.user;
+                console.log(user);
+                alert("created")
+                // ...
+            })
+            .catch((error)=>{
+            const errorCode =error.code;
+            const errorMessage =error.message
+    }); 
+    }
     const toggleForm = () => {
         setShowRegister(!showRegister);
     };
@@ -98,55 +124,79 @@ function Signin() {
             </div>
 
             <div className={styles.formContainer}>
-                <form className={styles.form} onSubmit={handleSubmit}>
+                <form className={styles.form}>
                     <img className={styles.logo2} src={Logo2} alt="Logo"/>
-                    <h1 className={styles.title}>Log In</h1>
+                    <h1 className={styles.title}>Register</h1>
 
-                    <div className={styles.inputContainer}>
-
-                        <EmailIcon className={styles.icon} fontSize="small"/>
+                    {/* <div className={styles.inputContainer}>
+                        <PersonIcon className={styles.icon} fontSize="small"/>
                         <input
                             className={styles.input}
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}required/>
-                        <label className={styles.label} htmlFor="email">
-                            Email
-                        </label>
-                    </div>
-
-                    <div className={styles.inputContainer}>
-
-                        <LockIcon className={styles.icon} fontSize="small"/>
-
-                        <input
-                            className={styles.input}
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            type="first"
+                            id="firstName"
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)}
                             required/>
-                        <label className={styles.label} htmlFor="password">
-                            Password
+                        <label className={styles.label} htmlFor="firstName">
+                            First Name
                         </label>
+
                     </div>
-                    
+
+                    <div className={styles.inputContainer}>
+                        <PersonIcon className={styles.icon} fontSize="small"/>
+                        <input className={styles.input}
+                            type="last"
+                            id="lastName"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
+                            required/>
+                        <label className={styles.label} htmlFor="lastName">
+                            Last Name
+                        </label>
+                    </div> */}
+
+                    <div className={styles.inputContainer}>
+                        <EmailIcon className={styles.icon} fontSize="small"/>
+                        <input type ={"email"} placeholder='Enter email' onChange={(e) => setEmail(e.target.value)}required/>
+
+                        {/* <input className={styles.input}
+                            type="email"
+                            placeholder="email"
+                            onChange={(e) => setEmail(e.target.value)}required/> */}
+                        {/* <label className={styles.label} htmlFor="email">
+                            Email
+                        </label> */}
+                    </div>
+
+                    <div className={styles.inputContainer}>
+                        <LockIcon className={styles.icon} fontSize="small"/>
+                        <input type ={"password"} placeholder='Enter password' onChange={(e) => setPassword(e.target.value)}required/>
+
+                        {/* <input className={styles.input}
+                            placeholder="Password"
+                            type="password"
+                            onChange={(e) => setPassword(e.target.value)}
+                            required/> */}
+
+                        {/* <label className={styles.label} htmlFor="password">
+                            Password
+                        </label> */}
+                    </div>
+
                     <div class={styles.remember}>
                         <label>
                             <input type="checkbox" className={styles.checkbox}/>
                             Remember Me
                         </label>
-                        <a href='#'>Forgot Password?</a>
                     </div>
 
-                    <button className={styles.button1} type="submit">
-                        Log In
-                    </button>
+                    <button onClick={signUp}> create </button>
+
 
                     <div class={styles.register}>
-                        <p>Don't have an account
-                            <Link to='/signup'>Sign up</Link>
+                        <p>Already have an account?
+                            <Link to='/signin'>Sign In</Link>
                         </p>
                     </div>
                 </form>
@@ -155,4 +205,4 @@ function Signin() {
     );
 }
 
-export default Signin;
+export default Signup;

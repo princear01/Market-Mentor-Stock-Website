@@ -43,8 +43,7 @@ const Header = () => {
             <div className={styles.container}>
 
                 <div className={styles.logoContainer}>
-                    <img src={Logo} alt="Stock Logo" className={styles.logo}/>
-                    <div classname={styles.companyName}>Market Mentor</div>
+                    <div classname={styles.companyName}>MARKET MENTOR</div>
                 </div>
                 <SearchBar/> {isMobile
                     ? (
@@ -85,7 +84,7 @@ const Header = () => {
                         </div>
                     )}
 
-                <Link to="/sign-in" className={styles.button}>
+                <Link to="/signin" className={styles.button}>
                     Login
                 </Link>
 
